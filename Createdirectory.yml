@@ -1,5 +1,5 @@
 ---
-- hosts: tag_role_web
+- hosts: 54.164.182.153
   tasks:
    - name : run date command
      shell: "date"
