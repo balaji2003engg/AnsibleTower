@@ -1,0 +1,11 @@
+---
+- hosts: tag_role_web
+  tasks:
+   - name : run date command
+     shell: "date"
+
+   - name : file module
+     file:
+       path: "/root/ansible"
+       state: directory
+ 
