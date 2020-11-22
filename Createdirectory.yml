@@ -1,6 +1,7 @@
 ---
 - hosts: 54.164.182.153
   remote_user: ec2-user
+  become_method: sudo
   tasks:
    - name : run date command
      shell: "date"
