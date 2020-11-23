@@ -1,6 +1,5 @@
 ---
 - hosts: ec2-52-3-251-143.compute-1.amazonaws.com
-  become_method: sudo
   tasks:
    - name : run date command
      shell: "date"
