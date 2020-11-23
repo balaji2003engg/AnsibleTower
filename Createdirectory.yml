@@ -1,5 +1,5 @@
 ---
-- hosts: tag_role_web
+- hosts: localhost
   become_method: sudo
   tasks:
    - name : run date command
