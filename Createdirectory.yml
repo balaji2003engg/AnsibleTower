@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_role_web
+- hosts: all
   tasks:
    - name : run date command
      shell: "date"
