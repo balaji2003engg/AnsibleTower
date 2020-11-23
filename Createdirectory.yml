@@ -2,7 +2,6 @@
 - hosts: ec2-52-3-251-143.compute-1.amazonaws.com
   become: true
   become_method: sudo
-  become_user: ec2-user
   tasks:
    - name : run date command
      shell: "date"
