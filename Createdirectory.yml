@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_role_web
+- hosts: tag_role_web
   become_method: sudo
   tasks:
    - name : run date command
