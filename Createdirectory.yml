@@ -5,7 +5,5 @@
      shell: "date"
 
    - name : file module
-     file:
-       path: "/opt/ansible/tag"
-       state: directory
+     shell: "sudo mkdir -p /opt/ansible"
  
