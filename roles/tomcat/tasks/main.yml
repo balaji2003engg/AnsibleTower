@@ -7,6 +7,6 @@
    dest: /tmp/
    username: balaji2003engg@gmail.com
    password: "Ch683212@"
-   notify: 
-        start tomcat
+  notify: 
+       - start tomcat
     
