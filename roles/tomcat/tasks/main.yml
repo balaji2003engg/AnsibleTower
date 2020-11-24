@@ -3,6 +3,6 @@
   shell: "systemctl stop tomcat"
 - name : artifact
   get_url:
-   url: {{jfrogurl}//libs-snapshot-local/test-web/test-web-1.0.0.4.jar
+   url: "{{jfrogurl}/libs-snapshot-local/test-web/test-web-1.0.0.4.jar"
    dest: /tmp/
     
