@@ -1,4 +1,5 @@
 ---
+- import_tasks: roles/tomcat/handlers/main.yml
 - name : stop tomcat
   shell: "systemctl stop tomcat"
 - name : artifact
