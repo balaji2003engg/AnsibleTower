@@ -5,4 +5,6 @@
   get_url:
    url: "{{jfrogurl}}/libs-snapshot-local/test-web/test-web-1.0.0.4.jar"
    dest: /tmp/
+   username: balaji2003engg@gmail.com
+   password: "Ch683212@"
     
