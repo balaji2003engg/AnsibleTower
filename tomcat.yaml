@@ -1,0 +1,7 @@
+---
+- hosts: ec2-3-84-227-3.compute-1.amazonaws.com
+  become: true
+  become_method: sudo
+  roles:
+   - tomcat
+   
