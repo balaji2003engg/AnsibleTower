@@ -1,2 +1,4 @@
 ---
 # vars file for tomcat
+jfrogpassword : "Ch683212@"
+jfrogurl: "https://balaji2003engg.jfrog.io"
