@@ -6,7 +6,7 @@
   
 - name : Get the war file from artifactory
   get_url:
-     url: {{jfrogurl}}/artifactory/libs-snapshot-local/test-web/sample-1.10.20.war
+     url: "{{jfrogurl}}/artifactory/libs-snapshot-local/test-web/sample-1.10.20.war"
      dest: /tmp/
      username: "balaji2003engg@gmail.com"
      password: {{jfrogpassword}}
