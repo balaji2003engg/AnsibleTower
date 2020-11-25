@@ -15,6 +15,7 @@
   copy:
      src: /tmp/sample-1.10.20.war
      dest: /opt/tomcat/webapps
+     remote_src: true
       
 - name : start the tomcat 
   shell: "systemctl start tomcat"
