@@ -10,3 +10,11 @@
      dest: /tmp/
      username: "balaji2003engg@gmail.com"
      password: "{{jfrogpassword}}"
+     
+- name : copy the war to the webapps folder
+  copy:
+     src: /tmp/sample-1.10.20.war
+     dest: /opt/tomcat/webapps
+      
+- name : start the tomcat 
+  shell: "systemctl start tomcat"
