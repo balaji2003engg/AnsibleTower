@@ -19,7 +19,7 @@
      
 - name : copy the tomcat service file 
   copy:
-    src: "roles/tomcat/templates/tomcat.service.j2"
+    src: "tomcat.service.j2"
     dest: "/etc/systemd/system/tomcat.servcie"
     remote_src: yes
 
