@@ -21,7 +21,7 @@
   template:
     src: "roles/tomcat/templates/tomcat.service.j2"
     dest: "/etc/systemd/system/tomcat.servcie"
-    remote_src: yes
+    #remote_src: yes
 
 - name : enable the service
   shell: "systemctl enable tomcat"
