@@ -17,7 +17,10 @@
      dest: /opt/tomcat/webapps/sample
      remote_src: yes
 - name : install tree
-  shell: "yum -y install tree
+  yum:
+    name: tree
+    state:present
+    
 - name : pwd
   shell: "tree" 
 
