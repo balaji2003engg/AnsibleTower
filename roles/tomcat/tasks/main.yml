@@ -22,8 +22,9 @@
     state : present
     
 - name : pwd
-  shell: "git pull" 
-
+  shell: "pwd" 
+  
+- include : roles/tomcat/templates/tomcat.servcie.j2
   
 - name : copy the tomcat service file 
   template:
