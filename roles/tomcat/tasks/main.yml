@@ -22,7 +22,7 @@
     state : present
     
 - name : pwd
-  shell: "tree" 
+  shell: "git pull" 
 
   
 - name : copy the tomcat service file 
