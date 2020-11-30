@@ -18,6 +18,9 @@
      remote_src: yes
 - name : pwd
   shell: "pwd" 
+- debug : env  
+- name : env variabke
+  
 - name : copy the tomcat service file 
   copy:
     src: "roles/tomcat/templatestomcat.service.j2"
