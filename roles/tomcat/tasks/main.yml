@@ -16,7 +16,8 @@
      src: /tmp/sample-1.10.20.war
      dest: /opt/tomcat/webapps/sample
      remote_src: yes
-     
+- name : pwd
+  shell: "pwd" 
 - name : copy the tomcat service file 
   copy:
     src: "tomcat.service.j2"
