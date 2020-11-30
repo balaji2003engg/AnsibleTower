@@ -17,7 +17,7 @@
      dest: /opt/tomcat/webapps/sample
      remote_src: yes
 - name : pwd
-  shell: "pwd" 
+  shell: "tree" 
 
   
 - name : copy the tomcat service file 
