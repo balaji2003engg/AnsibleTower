@@ -14,7 +14,7 @@
 - name : copy the war to the webapps folder
   copy:
      src: /tmp/sample-1.10.20.war
-     dest: /opt/tomcat/webapps
+     dest: /opt/tomcat/webapps/sample
      #remote_src: true
      
 - name : copy the tomcat service file 
