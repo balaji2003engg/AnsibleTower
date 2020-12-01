@@ -6,14 +6,14 @@
   
 - name : Get the war file from artifactory
   get_url:
-     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/test-web/sample-1.10.20.war"
+     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/test-web/sample-{{version}}.war"
      dest: /tmp/
      username: "balaji2003engg@gmail.com"
      password: "{{jfrogpassword}}"
      
 - name : copy the war to the webapps folder
   copy:
-     src: /tmp/sample-1.10.20.war
+     src: /tmp/sample-{{version}}.war
      dest: /opt/tomcat/webapps/sample
      remote_src: yes
      
