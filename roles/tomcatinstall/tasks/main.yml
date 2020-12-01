@@ -1,0 +1,30 @@
+---
+- name : install open jdk
+  yum :
+   name : 
+     - java-1.8.0-openjdk
+     - java-1.8.0-openjdk-devel
+- name : tomcat war file
+  get_url:
+    url: https://mirrors.sonic.net/apache/tomcat/tomcat-8/v8.5.59/bin/apache-tomcat-8.5.59.tar.gz
+    dest: /opt/
+    
+- name : untar
+  shell: tar xzvf /opt/apache-tomcat-8.5.59.tar.gz -C /opt/tomcat/ --strip-components=1
+- name :   create group
+  shell: "sudo groupadd tomcat"
+  
+- name : tomcat user
+  shell: sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+  
+- name : chmod
+  shell: chmod -R 755 /opt/tomcat
+
+- name : chown
+  shell: "chown -R tomcat:tomcat /opt/tomcat"  
+  
+- name : tomcat serviece file
+  copy:
+    src: /home/ec2-user/AnsibleTower/roles/tomcatinstall/
+    dest: //etc/systemd/system/tomcat.service
+  
