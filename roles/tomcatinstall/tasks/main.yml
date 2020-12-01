@@ -24,8 +24,8 @@
   shell: "chown -R tomcat:tomcat /opt/tomcat"  
   
 - name : tomcat serviece file
-  copy:
-    src: home/ec2-user/AnsibleTower/roles/tomcatinstall/templates/tomcat.service.j2
+  get_url:
+    url: https://devops2020.s3.amazonaws.com/tomcat.service.j2
     dest: /etc/systemd/system/tomcat.service
 - name : enable the service
   shell: "systemctl enable tomcat"
