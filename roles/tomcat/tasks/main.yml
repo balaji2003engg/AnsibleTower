@@ -17,11 +17,11 @@
      dest: /opt/tomcat/webapps/sample
      remote_src: yes
      
-- name : copy the tomcat service file 
-  template:
-    src: "roles/tomcat/templates/tomcat.service.j2"
-    dest: "/etc/systemd/system/tomcat.servcie"
-    remote_src: yes
+#- name : copy the tomcat service file 
+ # template:
+    #src: "roles/tomcat/templates/tomcat.service.j2"
+   # dest: "/etc/systemd/system/tomcat.servcie"
+  #  remote_src: yes
 
 - name : enable the service
   shell: "systemctl enable tomcat"
