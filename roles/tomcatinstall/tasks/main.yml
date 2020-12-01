@@ -10,7 +10,7 @@
     dest: /opt/
     
 - name : untar
-  shell: tar -xzvf /opt/apache-tomcat-8.5.59.tar.gz -C /opt/tomcat/ --strip-components=1
+  shell: tar -xzvf /opt/apache-tomcat-8.5.60.tar.gz -C /opt/tomcat/ --strip-components=1
 - name :   create group
   shell: "sudo groupadd tomcat"
   
