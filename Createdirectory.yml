@@ -1,11 +1,11 @@
 ---
-- hosts: ec2-3-84-227-3.compute-1.amazonaws.com
+- hosts: ec2-34-207-116-72.compute-1.amazonaws.com
   become: true
   become_method: sudo
   tasks:
-   - name : run date command
-     shell: "date"
+   - name : pwd
+     shell: "pwd"
 
    - name : file module
-     shell: "mkdir -p /opt/ansible/b"
+    # shell: "mkdir -p /opt/ansible/b"
  
