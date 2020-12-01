@@ -6,6 +6,6 @@
    - name : pwd
      shell: "pwd"
 
-   - name : file module
+ #  - name : file module
     # shell: "mkdir -p /opt/ansible/b"
  
