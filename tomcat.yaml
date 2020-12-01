@@ -1,5 +1,5 @@
 ---
-- hosts: ec2-54-197-205-107.compute-1.amazonaws.com
+- hosts: ec2-34-207-116-72.compute-1.amazonaws.com
   become: true
   become_method: sudo
   roles:
