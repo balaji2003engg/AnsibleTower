@@ -25,7 +25,7 @@
   
 - name : tomcat serviece file
   copy:
-    src: /home/ec2-user/AnsibleTower/roles/tomcatinstall/
+    src: home/ec2-user/AnsibleTower/roles/tomcatinstall/templates/tomcat.service.j2
     dest: /etc/systemd/system/tomcat.service
 - name : enable the service
   shell: "systemctl enable tomcat"
