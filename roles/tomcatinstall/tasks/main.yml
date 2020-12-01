@@ -15,7 +15,7 @@
   shell: "sudo groupadd tomcat"
   
 - name : tomcat user
-  shell: sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+  shell: "sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat"
   
 - name : chmod
   shell: chmod -R 755 /opt/tomcat
@@ -26,5 +26,12 @@
 - name : tomcat serviece file
   copy:
     src: /home/ec2-user/AnsibleTower/roles/tomcatinstall/
-    dest: //etc/systemd/system/tomcat.service
+    dest: /etc/systemd/system/tomcat.service
+- name : enable the service
+  shell: "systemctl enable tomcat"
   
+- name : daemon reload
+  shell: "systemctl daemon-reload"
+ 
+- name : start the tomcat 
+  shell: "systemctl start tomcat"
