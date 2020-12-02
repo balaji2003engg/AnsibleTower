@@ -1,0 +1,6 @@
+---
+- hosts: ec2-54-90-24-110.compute-1.amazonaws.com
+  become: true
+  become_method: sudo
+  roles:
+   - tomcatinstall8
