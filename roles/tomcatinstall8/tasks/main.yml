@@ -2,8 +2,8 @@
 - name: install java
   yum:
     name:
-    - install java-1.8.0-openjdk
-    - java-1.8.0-openjdk-devel
+     - install java-1.8.0-openjdk
+     - java-1.8.0-openjdk-devel
 
 - name : Download the tomcat war file
   get_url:
