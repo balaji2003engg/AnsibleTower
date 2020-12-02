@@ -6,30 +6,27 @@
   
 - name : Get the war file from artifactory
   get_url:
-     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/test-web/sample-1.10.20.war"
+     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/hello-world/HelloWorld-{{version}}.war"
      dest: /tmp/
      username: "balaji2003engg@gmail.com"
      password: "{{jfrogpassword}}"
      
 - name : copy the war to the webapps folder
   copy:
-     src: /tmp/sample-1.10.20.war
-     dest: /opt/tomcat/webapps/sample
+     src: /tmp/HelloWorld-{{version}}.war
+     dest: /opt/tomcat/webapps/HelloWorld.war
      remote_src: yes
-- name : install tree
-  yum :
-    name : tree
-    state : present
+
     
 - name : pwd
   shell: "pwd" 
   
-- include : roles/tomcat/templates/tomcat.servcie.j2
+
   
-- name : copy the tomcat service file 
-  template:
-    src: "tomcat.service.j2"
-    dest: "/etc/systemd/system/tomcat.servcie"
+#- name : copy the tomcat service file 
+ # template:
+    #src: "tomcat.service.j2"
+    #dest: "/etc/systemd/system/tomcat.servcie"
     
 
 - name : enable the service
