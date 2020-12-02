@@ -6,7 +6,7 @@
   
 - name : Get the war file from artifactory
   get_url:
-     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/hello-world/HelloWorld-{{version}}.war"
+     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/Hello-world/HelloWorld-{{version}}.war"
      dest: /tmp/
      username: "balaji2003engg@gmail.com"
      password: "{{jfrogpassword}}"
