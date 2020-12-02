@@ -22,10 +22,10 @@
   group : name=tomcat state =present
   
 - name: create tomcat user and add to the tomcat group
-  user: name=tomcat group=tomcat state=present shell=/bin/bash home-/home/tomcat
+  user: name=tomcat group=tomcat state=present shell=/bin/bash home=/home/tomcat createhome=yes
   
 - name : change the permissions
-  shell : chmod -R 755 /opt/tomcat
+  shell : "chmod -R 755 /opt/tomcat"
   
 - name : change the ownership to tomcat
   shell : "chown -R tomcat:tomcat /opt/tomcat"
