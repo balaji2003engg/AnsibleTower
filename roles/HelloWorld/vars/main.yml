@@ -1,0 +1,10 @@
+---
+# vars file for tomcat
+jfrogpassword : "Ch683212@"
+jfrogurl: "https://balaji2003engg.jfrog.io"
+jfrogpath1:
+  dev: libs-snapshot-local
+  qa: libs-release-local
+  prod: libs-release-lcoal
+jfrogpath: libs-snapshot-local
+projectname: HelloWorld

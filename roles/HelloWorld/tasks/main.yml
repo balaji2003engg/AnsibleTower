@@ -1,0 +1,33 @@
+---
+
+
+- name : stop tomcat
+  shell: "systemctl stop tomcat"
+  
+- name : Get the war file from artifactory
+  get_url:
+     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/{{projectname}}/{{projectname}}-{{version}}.war"
+     dest: /tmp/
+     username: "balaji2003engg@gmail.com"
+     password: "{{jfrogpassword}}"
+     
+- name : copy the war to the webapps folder
+  copy:
+     src: /tmp/{{projectname}}-{{version}}.war
+     dest: /opt/tomcat/webapps/{{projectname}}.war
+     remote_src: yes
+     
+#- name : copy the tomcat service file 
+ # template:
+    #src: "roles/tomcat/templates/tomcat.service.j2"
+   # dest: "/etc/systemd/system/tomcat.servcie"
+  #  remote_src: yes
+
+- name : enable the service
+  shell: "systemctl enable tomcat"
+  
+- name : daemon reload
+  shell: "systemctl daemon-reload"
+ 
+- name : start the tomcat 
+  shell: "systemctl start tomcat"
