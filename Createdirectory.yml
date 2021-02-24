@@ -1,5 +1,5 @@
 ---
-- hosts: ip-172-31-47-225.ec2.internal
+- hosts: ec2-54-146-46-2.compute-1.amazonaws.com
   become: true
   become_method: sudo
   tasks:
