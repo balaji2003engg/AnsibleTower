@@ -6,15 +6,15 @@
   
 - name : Get the war file from artifactory
   get_url:
-     url: "{{jfrogurl}}/artifactory/{{jfrogpath1[env]}}/{{projectname}}/{{projectname}}-{{version}}.war"
+     url: "https://chbalaji080186.jfrog.io/artifactory/libs-snapshot-local/application1/application1-1.0.22.war"
      dest: /tmp/
-     username: "balaji2003engg@gmail.com"
-     password: "{{jfrogpassword}}"
+     username: "chbalaji080186@gmail.com"
+     password: "Ch683212@"
      
 - name : copy the war to the webapps folder
   copy:
-     src: /tmp/{{projectname}}-{{version}}.war
-     dest: /opt/tomcat/webapps/{{projectname}}.war
+     src: /tmp/application1-1.0.22.war
+     dest: /opt/tomcat/webapps/application1-1.0.22.war
      remote_src: yes
      
 #- name : copy the tomcat service file 
