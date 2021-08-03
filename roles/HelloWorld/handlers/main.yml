@@ -1,4 +1,0 @@
----
-# handlers file for tomcat
-- name : start the tomcat 
-  shell: "systemctl start tomcat"
