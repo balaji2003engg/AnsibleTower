@@ -1,5 +1,5 @@
 ---
-- hosts: ec2-54-146-46-2.compute-1.amazonaws.com
+- hosts: 100.26.50.254
   become: true
   become_method: sudo
   tasks:
