@@ -2,8 +2,8 @@
 # vars file for tomcat
 jfrogpassword : "Ch683212@"
 jfrogurl: "https://balajicgtraining.jfrog.io"
-jfrogpath1:
+jfrogpath:
   dev: libs-snapshot-local
   qa: libs-release-local
   prod: libs-release-lcoal
-jfrogpath: libs-snapshot-local
+jfrogpath1: libs-snapshot-local
