@@ -14,7 +14,7 @@
 - name : copy the war to the webapps folder
   copy:
      src: /tmp/helloworld-{{version}}.war
-     dest: /opt/tomcat/webapps/helloworld
+     dest: /opt/tomcat/webapps/helloworld.war
      remote_src: yes
      
 - name : copy the tomcat service file 
