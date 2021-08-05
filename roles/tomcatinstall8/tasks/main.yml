@@ -7,7 +7,7 @@
 
 - name : Download the tomcat war file
   get_url:
-    url: https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.60/bin/apache-tomcat-8.5.60.tar.gz
+    url: https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
     dest: /opt/
  
 - name : create the tomcat directory
@@ -16,12 +16,12 @@
     state: directory
  
 - name : untar the tomcat war file   
-  shell : tar -xzvf /opt/apache-tomcat-8.5.60.tar.gz -C /opt/tomcat/ --strip-components=1
+  shell : tar -xzvf /opt/apache-tomcat-8.5.69.tar.gz -C /opt/tomcat/ --strip-components=1
   
 - name : Create the tomcat user
   group : name=tomcat state=present
   
-- name: create tomcat user and add to the tomcat group
+- name: ADD tomcat user to the tomcat group
   user: name=tomcat group=tomcat state=present shell=/bin/bash home=/home/tomcat createhome=yes
   
 - name : change the permissions
