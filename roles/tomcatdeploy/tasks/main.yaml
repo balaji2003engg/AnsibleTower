@@ -1,0 +1,26 @@
+---
+- name: stop tomcat
+  shell: systemctl stop tomcat
+
+- name: Get the war file from the Jfrog
+  get_url:
+   url: "https://balajicgtraining.jfrog.io/artifactory/libs-release-local/helloworld/helloworld-1.1.13.war"
+   dest: /tmp/
+   username: danalakshmidevops08@gmail.com
+   password: "Ch683212@"
+
+
+- name: Copy war file to the webapps folder
+  copy:
+    src: "/tmp/helloworld-1.1.13.war"
+    dest: /opt/tomcat/webapps/helloworldapp.war
+    remote_src: yes
+
+- name: enable the sevrice
+  shell: systemctl enable tomcat
+
+- name: daemon relaod
+  shell: systemctl daemon-reload
+
+- name: start the tomcat
+  shell: systemctl start tomcat
