@@ -4,7 +4,7 @@
 
 - name: Get the war file from the Jfrog
   get_url:
-   url: "{{jfrogurl}}/{{jfrogpath[env]}}/helloworld/helloworld-1.1.13.war"
+   url: "{{jfrogurl}}/{{jfrogpath[env]}}/helloworld/helloworld-{{version}}.war"
    dest: /tmp/
    username: danalakshmidevops08@gmail.com
    password: "Ch683212@"
@@ -12,7 +12,7 @@
 
 - name: Copy war file to the webapps folder
   copy:
-    src: "/tmp/helloworld-1.1.13.war"
+    src: "/tmp/helloworld-{{version}}.war"
     dest: /opt/tomcat/webapps/helloworldapp.war
     remote_src: yes
     
