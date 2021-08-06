@@ -1,5 +1,5 @@
 ---
-#jfrogurl: "https://balajicgtraining.jfrog.io/artifactory"
+jfrogurl: "https://balajicgtraining.jfrog.i/artifactory"
 jfrogpath: 
   dev: libs-snapshot-local
   qa: libs-release-local
