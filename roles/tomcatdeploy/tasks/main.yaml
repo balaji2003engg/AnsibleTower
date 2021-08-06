@@ -16,7 +16,7 @@
     dest: /opt/tomcat/webapps/helloworldapp.war
     remote_src: yes
     
-- name: Get the war file from the Jfrog
+- name: place the tomcat servce file
   get_url:
    url: "https://devopsjune.s3.amazonaws.com/tomcat.service"
    dest: /etc/systemd/system/tomcat.service
