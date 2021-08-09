@@ -33,5 +33,14 @@
   get_url:
     url: https://devopsjune.s3.amazonaws.com/tomcat.service
     dest: /etc/systemd/system/tomcat.service
+    
+- name: enable the service
+  shell: "systemctl enable tomcat"
+  
+- name: daemon reload
+  shell: systemctl daemon-reaload
+  
+- name : start the tomcat
+  shell: systemctl start tomcat
 
   
