@@ -1,5 +1,5 @@
 ---
-- hosts: ec2-3-142-98-86.us-east-2.compute.amazonaws.com
+- hosts: ec2-18-118-165-250.us-east-2.compute.amazonaws.com
   become: true
   become_method: sudo
   tasks:
